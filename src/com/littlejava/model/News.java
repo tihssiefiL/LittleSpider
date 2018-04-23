@@ -12,11 +12,11 @@ public class News {
     public News(String title, String content) {
         this.title = title;
         this.content = content;
-        this.related = new HashMap<String, String>();
+        this.related = new HashMap<>();
     }
 
     public void addRelated(String date, String related_title) {
-        //填写你的代码
+        this.related.put(date,related_title);
     }
 
     public Map<String, String> getRelated() {

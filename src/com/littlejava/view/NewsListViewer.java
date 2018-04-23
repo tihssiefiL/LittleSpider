@@ -16,6 +16,7 @@ public class NewsListViewer {
             System.out.println("-----------------------------------------------");
             System.out.println("|Title| " + news.getTitle());
             System.out.println("|Content| " + news.getContent());
+            System.out.println("|related| " + news.getRelated());
 
             //填写你的代码
         }

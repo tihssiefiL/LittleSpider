@@ -29,9 +29,18 @@ public class NewsFactory {
                     reader.readLine(); // 跳过空行
                     String content = reader.readLine(); // 读取content
                     News news = new News(title, content);
-
-                    // 添加代码读取 相关新闻
-
+                    reader.readLine();
+                    while (true) {
+                        String time;
+                        String value;
+                        time = reader.readLine();
+                        value = reader.readLine();
+                        if (time != null) {
+                            news.addRelated(time, value);
+                        } else {
+                            break;
+                        }
+                    }
                     newsList.add(news);
                 } catch (java.io.IOException e) {
                     System.out.println("新闻读取出错");
